@@ -1,0 +1,125 @@
+<div class="min-h-screen bg-gray-50 flex">
+  
+  <aside class="w-64 bg-slate-900 text-white hidden md:flex flex-col">
+    <div class="p-6 border-b border-slate-800">
+      <h1 class="text-xl font-bold flex items-center gap-2">
+        <span class="p-1.5 bg-blue-600 rounded-md">H</span>
+        System Admin
+      </h1>
+    </div>
+    
+    <nav class="flex-1 p-4 space-y-2">
+      <a class="flex items-center gap-3 px-4 py-3 bg-blue-600 rounded-lg text-sm font-medium">
+        📊 Dashboard
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 rounded-lg text-sm font-medium text-slate-400 hover:text-white transition">
+        👥 Gestión Médicos
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 rounded-lg text-sm font-medium text-slate-400 hover:text-white transition">
+        🏥 Áreas Hospitalarias
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 rounded-lg text-sm font-medium text-slate-400 hover:text-white transition">
+        🔐 Seguridad y Roles
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 rounded-lg text-sm font-medium text-slate-400 hover:text-white transition">
+        📜 Logs del Sistema
+      </a>
+    </nav>
+
+    <div class="p-4 border-t border-slate-800">
+      <div class="flex items-center gap-3 p-2">
+        <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs">AD</div>
+        <div class="text-xs">
+          <p class="font-bold">Admin Root</p>
+          <p class="text-slate-500 italic">En línea</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="flex-1 flex flex-col">
+    
+    <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8">
+      <div class="text-sm text-gray-500">
+        Panel Principal / <span class="text-gray-900 font-medium">Resumen del Sistema</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="p-2 text-gray-400 hover:text-blue-600 relative">
+          🔔 <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+        </button>
+        <button class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md text-sm font-semibold border border-slate-200 hover:bg-red-50 hover:text-red-600 transition">
+          Cerrar Sesión
+        </button>
+      </div>
+    </header>
+
+    <section class="p-8 overflow-y-auto">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Total Médicos</p>
+          <h3 class="text-2xl font-black text-gray-800">124</h3>
+          <p class="text-xs text-green-500 mt-2">↑ 4 nuevos este mes</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Citas Activas</p>
+          <h3 class="text-2xl font-black text-gray-800">842</h3>
+          <p class="text-xs text-blue-500 mt-2">Sincronizado hace 1m</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Carga de Servidor</p>
+          <h3 class="text-2xl font-black text-gray-800 text-green-600">12%</h3>
+          <div class="w-full bg-gray-100 h-1 rounded-full mt-3">
+            <div class="bg-green-500 w-[12%] h-1 rounded-full"></div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Alertas</p>
+          <h3 class="text-2xl font-black text-red-500">2</h3>
+          <p class="text-xs text-gray-400 mt-2">Requieren atención</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+        <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+          <h4 class="font-bold text-gray-800">Personal Registrado recientemente</h4>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-700 transition">
+            + Nuevo Usuario
+          </button>
+        </div>
+        <table class="w-full text-left">
+          <thead class="bg-gray-50 text-gray-500 text-xs uppercase">
+            <tr>
+              <th class="px-6 py-4">Nombre</th>
+              <th class="px-6 py-4">Especialidad</th>
+              <th class="px-6 py-4">Rol</th>
+              <th class="px-6 py-4">Estado</th>
+              <th class="px-6 py-4 text-right">Acción</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">Dr. Ricardo Pérez</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Cardiología</td>
+              <td class="px-6 py-4"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">MÉDICO</span></td>
+              <td class="px-6 py-4"><span class="w-2 h-2 rounded-full bg-green-500 inline-block mr-2"></span> Activo</td>
+              <td class="px-6 py-4 text-right">
+                <button class="text-slate-400 hover:text-blue-600 font-bold">...</button>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">Dra. María Elena</td>
+              <td class="px-6 py-4 text-sm text-gray-500">Sistemas</td>
+              <td class="px-6 py-4"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">ADMIN</span></td>
+              <td class="px-6 py-4"><span class="w-2 h-2 rounded-full bg-green-500 inline-block mr-2"></span> Activo</td>
+              <td class="px-6 py-4 text-right">
+                <button class="text-slate-400 hover:text-blue-600 font-bold">...</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+</div>
